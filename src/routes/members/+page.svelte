@@ -29,7 +29,7 @@
 {:else}
     <ul>
         {#each members as member}
-        <li>{member.display} - {member.rank}</li>
+        <li>{member.display} - {member.rank} </li>
         {/each}
     </ul>
 {/if}
