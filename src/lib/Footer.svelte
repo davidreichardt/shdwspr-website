@@ -22,7 +22,7 @@
 		left: 0;
 		background: linear-gradient(
 			to top,
-			rgba(54, 56, 58, 1),
+			rgba(54, 56, 58, .9),
 			rgba(54, 56, 58, 0.6) 75%,
 			rgba(54, 56, 58, 0.2) 85%,
 			transparent 100%
@@ -33,6 +33,7 @@
 		z-index: 1000;
 		font-size: 0.8rem;
 		padding: 0;
+		backdrop-filter: blur(8px);
 	}
 
 	.copyright,
@@ -59,6 +60,11 @@
 		color: var(--lightgray);
 		text-decoration: none;
 		cursor: pointer;
+	}
+
+	.links a:hover {
+		color: var(--lightblue);
+		text-decoration: underline;
 	}
 
 	.links a:last-of-type {

@@ -15,15 +15,17 @@
 	</p>
 	<button class="btn join-btn" on:click={() => (window.location.href = '/join')}>Join Now</button>
 	<div class="branch-buttons">
-		<button class="btn branch-btn" on:click={() => togglePopover('Tactical')}>Spear Tactical</button
-		>
-		<button class="btn branch-btn" on:click={() => togglePopover('Logistics')}
-			>Spear Logistics</button
-		>
-		<button class="btn branch-btn" on:click={() => togglePopover('Recon')}>Spear Recon</button>
-		<button class="btn branch-btn" on:click={() => togglePopover('Guardian')}>Spear Guardian</button
-		>
+		<button class="btn default-btn branch-btn" on:click={() => togglePopover('Tactical')}>Spear Tactical</button>
+		<button class="btn default-btn branch-btn" on:click={() => togglePopover('Logistics')}>Spear Logistics</button>
+		<button class="btn default-btn branch-btn" on:click={() => togglePopover('Recon')}>Spear Recon</button>
+		<button class="btn default-btn branch-btn" on:click={() => togglePopover('Guardian')}>Spear Guardian</button>
 	</div>
+
+	<!-- div that dims and blurs the background when a popover is active -->
+	{#if activePopover}
+		<div class="dimmed-bg"></div>
+	{/if}
+
 	<div class="popover" class:show={activePopover === 'Tactical'}>
 		<h2>Spear Tactical</h2>
 		<h3>Combat and Security</h3>
@@ -123,25 +125,9 @@
 		display: flex;
 	}
 
-	.btn {
-		text-transform: uppercase;
-		letter-spacing: 0.1rem;
-		font-weight: 700;
-		font-size: 1rem;
-		cursor: pointer;
-		border: 2px solid var(--lightblue);
-		background-color: transparent;
-		color: var(--lightblue);
-		box-shadow: 0px 0px 10px var(--lightblue);
-		width: 15rem;
-		height: 5rem;
-		border-radius: 8px;
-		transition: 0.3s ease-in-out;
-	}
-
 	.join-btn {
 		margin: 50px auto;
-		font-size: 1.3rem;
+		font-size: 1.5rem;
 		font-weight: 800;
 		border-width: 3px;
 		background: linear-gradient(130deg, var(--mediumgray), var(--lightblue));
@@ -169,11 +155,15 @@
 		background: transparent;
 	}
 
-	.branch-btn:hover {
-		background-color: var(--lightblue);
-		color: var(--darkgray);
-		box-shadow: 0px 0px 20px var(--lightblue);
-		scale: 1.03;
+	.dimmed-bg {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		background: rgba(0, 0, 0, 0.5);
+		z-index: 900;
+		backdrop-filter: blur(5px);
 	}
 
 	.close-popover {
@@ -182,7 +172,7 @@
 		background-color: transparent;
 		font-size: 1rem;
 		margin-top: 2rem;
-		letter-spacing: .1rem;
+		letter-spacing: 0.1rem;
 	}
 
 	.popover {
@@ -193,7 +183,7 @@
 		border: 2px solid var(--lightblue);
 		box-shadow: 0px 0px 20px var(--lightblue);
 		border-radius: 1rem;
-		letter-spacing: .1rem;
+		letter-spacing: 0.1rem;
 		position: fixed;
 		top: 50%;
 		left: 50%;
@@ -207,7 +197,7 @@
 	.popover h2 {
 		font-size: 2rem;
 		font-weight: 900;
-		letter-spacing: .1rem;
+		letter-spacing: 0.1rem;
 		text-transform: uppercase;
 		text-shadow: 1px 1px 4px var(--lightblue);
 		margin: 0;
@@ -217,7 +207,7 @@
 	.popover h3 {
 		font-size: 1.2rem;
 		font-weight: 700;
-		letter-spacing: .1rem;
+		letter-spacing: 0.1rem;
 		text-transform: uppercase;
 		margin: 0;
 		margin-bottom: 2rem;

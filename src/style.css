@@ -11,6 +11,33 @@
     --mediumgray: #606466;
     --lightgray: #CECED0;
     --purple: #940EA5;
+    --neon-glow: rgba(0, 203, 239, .7);
+    --text-glow: rgba(0, 203, 239, .9);
+    --glass-bg: rgba(255, 255, 255, .08);
+    --glass-border: rgba(0, 203, 239, .3);
     font-family: 'Orbitron', sans-serif;
     font-weight: 400;
+}
+
+.btn {
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    border: 2px solid var(--lightblue);
+    background-color: transparent;
+    color: var(--lightblue);
+    box-shadow: inset 0 0 30px var(--lightblue);
+    width: 15rem;
+    height: 5rem;
+    border-radius: 8px;
+    transition: all .3s ease-in-out;
+}
+
+.default-btn:hover {
+    background-color: var(--lightblue);
+    color: var(--darkgray);
+    box-shadow: 0 0 20px var(--lightblue);
+    transform: scale(1.03);
 }
