@@ -9,7 +9,7 @@
 <section class="hero-container">
 	<h1 class="tagline">Forge Your Own Path</h1>
 	<!-- <img src="/images/shdwspr-logo.png" alt="Shadow Spear Initiative Logo" class="logo" /> -->
-	<p>
+	<p class="description">
 		Welcome to Shadow Spear Initiative. We are an organization that provides the freedom and support
 		to forge your own path in the 'verse. Your destiny is yours to shape - stand with SHDWSPR.
 	</p>
@@ -111,7 +111,7 @@
 		height: 10rem;
 	} */
 
-	p {
+	.description {
 		font-size: 1.3rem;
 		line-height: 2rem;
 		letter-spacing: 0.1rem;
@@ -127,49 +127,41 @@
 		text-transform: uppercase;
 		letter-spacing: 0.1rem;
 		font-weight: 700;
-        font-size: 1rem;
+		font-size: 1rem;
 		cursor: pointer;
 		border: 2px solid var(--lightblue);
-        background-color: transparent;
-        color: var(--lightblue);
-        box-shadow: 0px 0px 10px var(--lightblue);
+		background-color: transparent;
+		color: var(--lightblue);
+		box-shadow: 0px 0px 10px var(--lightblue);
 		width: 15rem;
 		height: 5rem;
 		border-radius: 8px;
-        transition: .3s ease-in-out;
+		transition: 0.3s ease-in-out;
 	}
-
-    .btn:hover {
-        background-color: var(--lightblue);
-        color: var(--darkgray);
-        box-shadow: 0px 0px 15px var(--lightblue);
-    }
 
 	.join-btn {
 		margin: 50px auto;
 		font-size: 1.3rem;
 		font-weight: 800;
-        border-width: 3px;
-        background: linear-gradient(130deg, var(--mediumgray), var(--lightblue));
-        box-shadow: 0px 0px 20px var(--lightblue);
-        color: var(--darkgray);
+		border-width: 3px;
+		background: linear-gradient(130deg, var(--mediumgray), var(--lightblue));
+		box-shadow: 0px 0px 20px var(--lightblue);
+		color: var(--darkgray);
 		margin-top: 2rem;
 		margin-bottom: 5rem;
 		width: 20rem;
 	}
 
-    .join-btn:hover {
-        background: linear-gradient(130deg, var(--lightblue), var(--mediumgray));
-        scale: 1.05;
-        color: var(--lightgray);
-        box-shadow: 0px 0px 25px var(--lightblue);
-    }
-
-    
+	.join-btn:hover {
+		background: linear-gradient(130deg, var(--lightblue), var(--mediumgray));
+		scale: 1.05;
+		color: var(--lightgray);
+		box-shadow: 0px 0px 25px var(--lightblue);
+	}
 
 	.branch-buttons {
 		display: flex;
-		gap: 1rem;
+		gap: 4rem;
 		justify-content: center;
 		width: 100%;
 		margin-top: auto;
@@ -177,12 +169,31 @@
 		background: transparent;
 	}
 
+	.branch-btn:hover {
+		background-color: var(--lightblue);
+		color: var(--darkgray);
+		box-shadow: 0px 0px 20px var(--lightblue);
+		scale: 1.03;
+	}
+
+	.close-popover {
+		cursor: pointer;
+		border: none;
+		background-color: transparent;
+		font-size: 1rem;
+		margin-top: 2rem;
+		letter-spacing: .1rem;
+	}
+
 	.popover {
 		display: none;
-		background: var(--darkgray);
-		color: var(--lightgray);
-		padding: 1rem;
+		background: linear-gradient(130deg, var(--mediumgray), var(--lightgray));
+		color: var(--darkgray);
+		padding: 2rem;
+		border: 2px solid var(--lightblue);
+		box-shadow: 0px 0px 20px var(--lightblue);
 		border-radius: 1rem;
+		letter-spacing: .1rem;
 		position: fixed;
 		top: 50%;
 		left: 50%;
@@ -191,6 +202,33 @@
 		max-width: 500px;
 		text-align: center;
 		z-index: 1000;
+	}
+
+	.popover h2 {
+		font-size: 2rem;
+		font-weight: 900;
+		letter-spacing: .1rem;
+		text-transform: uppercase;
+		text-shadow: 1px 1px 4px var(--lightblue);
+		margin: 0;
+		margin-bottom: 1rem;
+	}
+
+	.popover h3 {
+		font-size: 1.2rem;
+		font-weight: 700;
+		letter-spacing: .1rem;
+		text-transform: uppercase;
+		margin: 0;
+		margin-bottom: 2rem;
+	}
+
+	.popover p {
+		font-size: 1rem;
+		font-weight: 500;
+		line-height: 1.5rem;
+		margin: 0;
+		margin-bottom: 2rem;
 	}
 
 	.popover.show {
