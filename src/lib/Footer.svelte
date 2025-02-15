@@ -5,9 +5,11 @@
 <section class="footer">
 	<p class="copyright">&#169;2025 Shadow Spear Initiative</p>
 	<div class="links">
-		<a href={RSI_ORG_LINK} rel="noopener noreferrer" target="_blank">RSI Organization Page</a>
+		<a href={RSI_ORG_LINK} rel="noopener noreferrer" target="_blank">RSI Org Page</a>
 		<a href={DISCORD_LINK} rel="noopener noreferrer" target="_blank">Discord</a>
 	</div>
+	<div class="spacer"></div>
+	<!-- empty div to center links -->
 </section>
 
 <style>
@@ -15,31 +17,48 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		position: sticky;
+		position: fixed;
 		bottom: 0;
-		background-color: #333;
-		color: white;
-		height: 50px;
+		left: 0;
+		background: linear-gradient(
+			to top,
+			rgba(54, 56, 58, 1),
+			rgba(54, 56, 58, 0.6) 75%,
+			rgba(54, 56, 58, 0.2) 85%,
+			transparent 100%
+		);
+		color: var(--lightgray);
+		height: 80px;
 		width: 100%;
-        z-index: 1000;
-}
+		z-index: 1000;
+		font-size: 0.8rem;
+		padding: 0;
+	}
+
+	.copyright,
+	.spacer {
+		flex: 1;
+	}
 
 	.copyright {
 		margin: 0;
-		padding: 15px 0 15px 15px;
+		padding-top: 15px;
+		padding-left: 15px;
 	}
 
 	.links {
 		display: flex;
-		gap: 20px;
+		justify-content: center;
+		flex: 2;
+		gap: 25px;
 		margin: 0;
-		padding: 0;
+		padding-top: 15px;
 	}
 
 	.links a {
-		color: white;
+		color: var(--lightgray);
 		text-decoration: none;
-		padding: 15px;
+		cursor: pointer;
 	}
 
 	.links a:last-of-type {

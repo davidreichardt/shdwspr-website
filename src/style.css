@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'Orbitron';
+    src: url(fonts/Orbitron-VariableFont_wght.ttf) format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+:root {
+    --lightblue: #00CBEF;
+    --darkgray: #36383A;
+    --mediumgray: #606466;
+    --lightgray: #CECED0;
+    --purple: #940EA5;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 400;
+}

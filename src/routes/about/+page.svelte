@@ -111,8 +111,12 @@
 		execute with precision.
 	</p>
 	<p>
-		To this end, Spear Tactical, Spear Logistics, and Spear Recon are instituted to uphold our
+		To this end, Spear Tactical, Spear Logistics, Spear Recon, and Spear Guardian are instituted to uphold our
 		mission and safeguard the future of the Initiative.
 	</p>
 	<p>From the void, we rise.<br> 2948, Shadow Spear Initiative</p>
 </section>
+
+<style>
+	
+</style>
