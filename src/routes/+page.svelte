@@ -8,17 +8,24 @@
 
 <section class="hero-container">
 	<h1 class="tagline">Forge Your Own Path</h1>
-	<!-- <img src="/images/shdwspr-logo.png" alt="Shadow Spear Initiative Logo" class="logo" /> -->
 	<p class="description">
 		Welcome to Shadow Spear Initiative. We are an organization that provides the freedom and support
 		to forge your own path in the 'verse. Your destiny is yours to shape - stand with SHDWSPR.
 	</p>
 	<button class="btn join-btn" on:click={() => (window.location.href = '/join')}>Join Now</button>
 	<div class="branch-buttons">
-		<button class="btn default-btn branch-btn" on:click={() => togglePopover('Tactical')}>Spear Tactical</button>
-		<button class="btn default-btn branch-btn" on:click={() => togglePopover('Logistics')}>Spear Logistics</button>
-		<button class="btn default-btn branch-btn" on:click={() => togglePopover('Recon')}>Spear Recon</button>
-		<button class="btn default-btn branch-btn" on:click={() => togglePopover('Guardian')}>Spear Guardian</button>
+		<button class="btn default-btn branch-btn" on:click={() => togglePopover('Tactical')}
+			>Spear Tactical</button
+		>
+		<button class="btn default-btn branch-btn" on:click={() => togglePopover('Logistics')}
+			>Spear Logistics</button
+		>
+		<button class="btn default-btn branch-btn" on:click={() => togglePopover('Recon')}
+			>Spear Recon</button
+		>
+		<button class="btn default-btn branch-btn" on:click={() => togglePopover('Guardian')}
+			>Spear Guardian</button
+		>
 	</div>
 
 	<!-- div that dims and blurs the background when a popover is active -->
@@ -72,9 +79,11 @@
 	.hero-container {
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
-		height: 100vh;
-		overflow: hidden;
+		justify-content: center;
+		align-items: center;
+		min-height: 100vh;
+		overflow-x: hidden;
+		overflow-y: auto;
 		width: 100%;
 		background: url('/images/hero-polaris.jpeg') center/cover no-repeat;
 		padding: 0;
@@ -83,6 +92,7 @@
 		position: relative;
 	}
 
+	/* Add an overlay to the hero image to dim brightness */
 	.hero-container::before {
 		content: '';
 		position: absolute;
@@ -94,40 +104,35 @@
 		z-index: 0;
 	}
 
+	/* Make sure content stays on top of overlay and isn't dimmed */
 	.hero-container > * {
 		z-index: 1;
 	}
 
 	.tagline {
-		font-size: 5rem;
-		margin-top: 8rem;
+		font-size: clamp(2rem, 7vw, 5rem);
+		margin-top: clamp(6rem, 14vh, 8rem);
 		color: white;
 		text-align: center;
 		transform: skewX(-20deg);
 		text-shadow: 6px 6px 15px var(--lightblue);
 	}
 
-	/* .logo {
-		margin: 0 auto;
-		width: auto;
-		height: 10rem;
-	} */
-
 	.description {
-		font-size: 1.3rem;
-		line-height: 2rem;
+		font-size: clamp(1rem, 2vw, 1.3rem);
+		line-height: clamp(1.2rem, 3.5vh, 2rem);
 		letter-spacing: 0.1rem;
 		text-align: center;
 		color: white;
 		margin: 0 auto;
 		padding: 1rem;
-		max-width: 50rem;
-		display: flex;
+		width: clamp(15rem, 60vw, 50rem);
+		max-width: 80%;
 	}
 
 	.join-btn {
 		margin: 50px auto;
-		font-size: 1.5rem;
+		font-size: clamp(1rem , 2.5vw, 1.5rem);
 		font-weight: 800;
 		border-width: 3px;
 		background: linear-gradient(130deg, var(--mediumgray), var(--lightblue));
@@ -135,7 +140,7 @@
 		color: var(--darkgray);
 		margin-top: 2rem;
 		margin-bottom: 5rem;
-		width: 20rem;
+		width: clamp(15rem, 30vw ,20rem);
 	}
 
 	.join-btn:hover {
