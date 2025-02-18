@@ -22,7 +22,7 @@
 		left: 0;
 		background: linear-gradient(
 			to top,
-			rgba(54, 56, 58, .9),
+			rgba(54, 56, 58, 0.9),
 			rgba(54, 56, 58, 0.6) 75%,
 			rgba(54, 56, 58, 0.2) 85%,
 			transparent 100%
@@ -31,7 +31,8 @@
 		height: 80px;
 		width: 100%;
 		z-index: 1000;
-		font-size: 0.8rem;
+		font-size: .8rem;
+		letter-spacing: .1rem;
 		padding: 0;
 		backdrop-filter: blur(8px);
 	}
@@ -69,5 +70,37 @@
 
 	.links a:last-of-type {
 		padding-right: 25px;
+	}
+
+	@media (max-width: 1090px) {
+		.spacer {
+			display: none;
+		}
+
+		.links {
+			flex: 1;
+			justify-content: flex-end;
+		}
+
+		.links a:last-of-type {
+			padding-right: 15px;
+		}
+	}
+
+	@media (max-width: 900px) {
+		.footer {
+			height: 50px;
+		}
+
+		.copyright {
+			text-align: center;
+		}
+
+		.links,
+		.links a,
+		.spacer {
+			display: none;
+	
+		}
 	}
 </style>

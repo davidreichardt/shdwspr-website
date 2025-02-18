@@ -6,7 +6,8 @@
 	}
 </script>
 
-<section class="hero-container">
+<section class="main">
+	<div class="background-img"></div>
 	<h1 class="tagline">Forge Your Own Path</h1>
 	<p class="description">
 		Welcome to Shadow Spear Initiative. We are an organization that provides the freedom and support
@@ -76,24 +77,18 @@
 </section>
 
 <style>
-	.hero-container {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		min-height: 100vh;
-		overflow-x: hidden;
-		overflow-y: auto;
-		width: 100%;
+	.background-img {
 		background: url('/images/hero-polaris.jpeg') center/cover no-repeat;
-		padding: 0;
-		margin: 0;
-		z-index: 1;
-		position: relative;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		min-height: 100vh;
+		z-index: -2;
 	}
 
-	/* Add an overlay to the hero image to dim brightness */
-	.hero-container::before {
+	/* Add an overlay to the background image to dim brightness */
+	.background-img::before {
 		content: '';
 		position: absolute;
 		top: 0;
@@ -101,17 +96,24 @@
 		width: 100%;
 		height: 100%;
 		background: rgba(0, 0, 0, 0.3);
-		z-index: 0;
+		z-index: -1;
 	}
 
-	/* Make sure content stays on top of overlay and isn't dimmed */
-	.hero-container > * {
-		z-index: 1;
+	.main {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		min-height: 100vh;
+		width: 100%;
+		padding: 0;
+		margin: 0;
+		position: relative;
 	}
 
 	.tagline {
 		font-size: clamp(2rem, 7vw, 5rem);
-		margin-top: clamp(6rem, 14vh, 8rem);
+		margin-top: clamp(6rem, 12vh, 8rem);
 		color: white;
 		text-align: center;
 		transform: skewX(-20deg);
@@ -132,7 +134,7 @@
 
 	.join-btn {
 		margin: 50px auto;
-		font-size: clamp(1rem , 2.5vw, 1.5rem);
+		font-size: 1.5rem;
 		font-weight: 800;
 		border-width: 3px;
 		background: linear-gradient(130deg, var(--mediumgray), var(--lightblue));
@@ -140,7 +142,7 @@
 		color: var(--darkgray);
 		margin-top: 2rem;
 		margin-bottom: 5rem;
-		width: clamp(15rem, 30vw ,20rem);
+		width: clamp(15rem, 30vw, 20rem);
 	}
 
 	.join-btn:hover {
@@ -152,12 +154,18 @@
 
 	.branch-buttons {
 		display: flex;
-		gap: 4rem;
+		flex-wrap: wrap;
+		gap: 1rem;
 		justify-content: center;
-		width: 100%;
-		margin-top: auto;
-		padding-bottom: 10rem;
-		background: transparent;
+		width: 90%;
+		margin: auto 1.25rem 10vh;
+	}
+
+	.branch-btn {
+		flex: 1 1 45%;
+		min-width: 150px;
+		max-width: 380px;
+		padding: 20px;
 	}
 
 	.dimmed-bg {
@@ -229,4 +237,28 @@
 	.popover.show {
 		display: block;
 	}
+
+	/* @media (max-width: 1180px) {
+		.branch-buttons {
+			flex-wrap: wrap;
+			gap: 1rem;
+			
+		}
+
+		.branch-btn {
+			flex: 1 1 50%;
+			min-width: 150px;
+			max-width: 380px;
+		}
+	} */
+
+	/* @media (max-width: 750px) {
+		.branch-buttons {
+			margin-bottom: 3vh;
+		}
+		
+		.branch-btn {
+			max-width: 240px;
+		}
+	} */
 </style>
