@@ -9,29 +9,37 @@
 <section class="main">
 	<div class="background-img"></div>
 	<h1 class="tagline">Forge Your Own Path</h1>
-	<p class="description">
-		Welcome to Shadow Spear Initiative. We are an organization that provides the freedom and support
-		to forge your own path in the 'verse. Your destiny is yours to shape - stand with SHDWSPR.
-	</p>
-	<button class="btn join-btn" on:click={() => (window.location.href = '/join')}>Join Now</button>
+	<div class="text-div">
+		<p class="description">
+			Welcome to Shadow Spear Initiative. We are an organization that provides the freedom and
+			support to forge your own path in the 'verse.
+		</p>
+		<p class="description call-to-join">Your destiny is yours to shape.</p>
+		<p class="description glow-text">stand with SHDWSPR.</p>
+		<div class="join-div">
+			<button class="btn join-btn" on:click={() => (window.location.href = '/join')}>
+				Join Now
+			</button>
+		</div>
+	</div>
 	<div class="branch-buttons">
-		<button class="btn default-btn branch-btn" on:click={() => togglePopover('Tactical')}
-			>Spear Tactical</button
-		>
-		<button class="btn default-btn branch-btn" on:click={() => togglePopover('Logistics')}
-			>Spear Logistics</button
-		>
-		<button class="btn default-btn branch-btn" on:click={() => togglePopover('Recon')}
-			>Spear Recon</button
-		>
-		<button class="btn default-btn branch-btn" on:click={() => togglePopover('Guardian')}
-			>Spear Guardian</button
-		>
+		<button class="btn default-btn branch-btn" on:click={() => togglePopover('Tactical')}>
+			Spear Tactical
+		</button>
+		<button class="btn default-btn branch-btn" on:click={() => togglePopover('Logistics')}>
+			Spear Logistics
+		</button>
+		<button class="btn default-btn branch-btn" on:click={() => togglePopover('Recon')}>
+			Spear Recon
+		</button>
+		<button class="btn default-btn branch-btn" on:click={() => togglePopover('Guardian')}>
+			Spear Guardian
+		</button>
 	</div>
 
 	<!-- div that dims and blurs the background when a popover is active -->
 	{#if activePopover}
-		<div class="dimmed-bg"></div>
+		<div class="dimmed-bg" on:click={() => togglePopover(null)}></div>
 	{/if}
 
 	<div class="popover" class:show={activePopover === 'Tactical'}>
@@ -82,7 +90,7 @@
 		position: fixed;
 		top: 0;
 		left: 0;
-		width: 100%;
+		width: 100vw;
 		min-height: 100vh;
 		z-index: -2;
 	}
@@ -93,8 +101,8 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: 100%;
-		height: 100%;
+		width: 100vw;
+		height: 100vh;
 		background: rgba(0, 0, 0, 0.3);
 		z-index: -1;
 	}
@@ -102,70 +110,101 @@
 	.main {
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
 		align-items: center;
 		min-height: 100vh;
-		width: 100%;
+		width: 100vw;
+		max-width: 100vw;
 		padding: 0;
 		margin: 0;
 		position: relative;
+		letter-spacing: 0.1rem;
+		line-height: 1.5;
+		overflow-x: hidden;
 	}
 
 	.tagline {
 		font-size: clamp(2rem, 7vw, 5rem);
-		margin-top: clamp(6rem, 12vh, 8rem);
 		color: white;
 		text-align: center;
-		transform: skewX(-20deg);
-		text-shadow: 6px 6px 15px var(--lightblue);
+		font-style: italic;
+		text-shadow: 6px 6px 15px var(--text-glow);
+		margin-top: 90px;
+		max-width: 90%;
+		padding: 0 5%;
+	}
+
+	.text-div {
+		font-size: clamp(0.8rem, 2vw, 1.3rem);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		flex-grow: 1;
+		text-align: center;
+		margin-top: 2rem;
+		width: 95%;
+		padding: 0 5%;
 	}
 
 	.description {
-		font-size: clamp(1rem, 2vw, 1.3rem);
-		line-height: clamp(1.2rem, 3.5vh, 2rem);
-		letter-spacing: 0.1rem;
-		text-align: center;
 		color: white;
-		margin: 0 auto;
-		padding: 1rem;
-		width: clamp(15rem, 60vw, 50rem);
-		max-width: 80%;
+		margin: 0 0 1rem;
+		max-width: 80ch;
+	}
+
+	.call-to-join,
+	.glow-text {
+		margin: 1rem 0 1rem;
+	}
+
+	.glow-text {
+		font-style: italic;
+		color: var(--lightblue);
+		text-shadow: 0 0 15px var(--text-glow);
+		font-weight: 700;
+		padding: 0 5%;
+	}
+
+	.join-div {
+		margin: 1.5rem 0 4.5rem;
+		display: flex;
+		justify-content: center;
+		width: 100%;
 	}
 
 	.join-btn {
-		margin: 50px auto;
 		font-size: 1.5rem;
 		font-weight: 800;
 		border-width: 3px;
 		background: linear-gradient(130deg, var(--mediumgray), var(--lightblue));
-		box-shadow: 0px 0px 20px var(--lightblue);
+		box-shadow: 0px 0px 20px var(--neon-glow);
 		color: var(--darkgray);
-		margin-top: 2rem;
-		margin-bottom: 5rem;
-		width: clamp(15rem, 30vw, 20rem);
+		width: clamp(15rem, 50vw, 20rem);
+		padding: 10px 20px;
 	}
 
 	.join-btn:hover {
 		background: linear-gradient(130deg, var(--lightblue), var(--mediumgray));
 		scale: 1.05;
 		color: var(--lightgray);
-		box-shadow: 0px 0px 25px var(--lightblue);
+		box-shadow: 0px 0px 25px var(--neon-glow);
 	}
 
 	.branch-buttons {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 1rem;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
 		justify-content: center;
-		width: 90%;
-		margin: auto 1.25rem 10vh;
+		gap: 1rem;
+		width: 100vw;
+		max-width: 80%;
+		margin-bottom: 150px;
 	}
 
 	.branch-btn {
-		flex: 1 1 45%;
-		min-width: 150px;
-		max-width: 380px;
-		padding: 20px;
+		width: auto;
+		min-width: 235px;
+		max-width: 400px;
+		font-size: 1rem;
+		padding: 15px 15px;
 	}
 
 	.dimmed-bg {
@@ -175,8 +214,9 @@
 		width: 100vw;
 		height: 100vh;
 		background: rgba(0, 0, 0, 0.5);
-		z-index: 900;
+		z-index: 10;
 		backdrop-filter: blur(5px);
+		cursor: pointer;
 	}
 
 	.close-popover {
@@ -185,7 +225,6 @@
 		background-color: transparent;
 		font-size: 1rem;
 		margin-top: 2rem;
-		letter-spacing: 0.1rem;
 	}
 
 	.popover {
@@ -193,26 +232,24 @@
 		background: linear-gradient(130deg, var(--mediumgray), var(--lightgray));
 		color: var(--darkgray);
 		padding: 2rem;
-		border: 2px solid var(--lightblue);
-		box-shadow: 0px 0px 20px var(--lightblue);
+		border: 2px solid var(--glass-border);
+		box-shadow: 0px 0px 20px var(--neon-glow);
 		border-radius: 1rem;
-		letter-spacing: 0.1rem;
 		position: fixed;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-		width: 80%;
+		width: 90%;
 		max-width: 500px;
 		text-align: center;
 		z-index: 1000;
 	}
 
 	.popover h2 {
-		font-size: 2rem;
+		font-size: 1.8rem;
 		font-weight: 900;
-		letter-spacing: 0.1rem;
 		text-transform: uppercase;
-		text-shadow: 1px 1px 4px var(--lightblue);
+		text-shadow: 1px 1px 4px var(--text-glow);
 		margin: 0;
 		margin-bottom: 1rem;
 	}
@@ -220,7 +257,6 @@
 	.popover h3 {
 		font-size: 1.2rem;
 		font-weight: 700;
-		letter-spacing: 0.1rem;
 		text-transform: uppercase;
 		margin: 0;
 		margin-bottom: 2rem;
@@ -229,7 +265,6 @@
 	.popover p {
 		font-size: 1rem;
 		font-weight: 500;
-		line-height: 1.5rem;
 		margin: 0;
 		margin-bottom: 2rem;
 	}
@@ -238,27 +273,16 @@
 		display: block;
 	}
 
-	/* @media (max-width: 1180px) {
+	@media (max-width: 1080px) {
 		.branch-buttons {
-			flex-wrap: wrap;
-			gap: 1rem;
-			
+			grid-template-columns: repeat(2, 1fr);
 		}
+	}
 
-		.branch-btn {
-			flex: 1 1 50%;
-			min-width: 150px;
-			max-width: 380px;
-		}
-	} */
-
-	/* @media (max-width: 750px) {
+	@media (max-width: 540px) {
 		.branch-buttons {
-			margin-bottom: 3vh;
+			grid-template-columns: 1fr;
+			margin-bottom: 80px;
 		}
-		
-		.branch-btn {
-			max-width: 240px;
-		}
-	} */
+	}
 </style>

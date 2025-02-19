@@ -8,8 +8,8 @@
 		<a href={RSI_ORG_LINK} rel="noopener noreferrer" target="_blank">RSI Org Page</a>
 		<a href={DISCORD_LINK} rel="noopener noreferrer" target="_blank">Discord</a>
 	</div>
-	<div class="spacer"></div>
 	<!-- empty div to center links -->
+	<div class="spacer"></div>
 </section>
 
 <style>
@@ -31,8 +31,8 @@
 		height: 80px;
 		width: 100%;
 		z-index: 1000;
-		font-size: .8rem;
-		letter-spacing: .1rem;
+		font-size: 0.8rem;
+		letter-spacing: 0.1rem;
 		padding: 0;
 		backdrop-filter: blur(8px);
 	}
@@ -65,14 +65,14 @@
 
 	.links a:hover {
 		color: var(--lightblue);
-		text-decoration: underline;
+		text-shadow: 0 0 10px var(--text-glow);
 	}
 
 	.links a:last-of-type {
 		padding-right: 25px;
 	}
 
-	@media (max-width: 1090px) {
+	@media (max-width: 1080px) {
 		.spacer {
 			display: none;
 		}
@@ -87,20 +87,21 @@
 		}
 	}
 
-	@media (max-width: 900px) {
+	@media (max-width: 570px) {
 		.footer {
-			height: 50px;
+			height: 40px;
 		}
 
 		.copyright {
 			text-align: center;
+			padding-top: 10px;
+			font-size: .6rem;
 		}
 
 		.links,
 		.links a,
 		.spacer {
 			display: none;
-	
 		}
 	}
 </style>

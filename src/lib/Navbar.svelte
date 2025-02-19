@@ -3,7 +3,7 @@
 		<li><a class="nav-link" href="/">Home</a></li>
 		<li><a class="nav-link" href="/about">About</a></li>
 		<!-- <li><a class="nav-link" href="/members">Members</a></li> -->
-		<li><a class="nav-link" href="/join">Join</a></li>
+		<!-- <li><a class="nav-link" href="/join">Join</a></li> -->
 	</ul>
 </nav>
 
@@ -26,6 +26,7 @@
 			transparent 100%
 		);
 		backdrop-filter: blur(8px);
+		letter-spacing: .1rem;
 	}
 
 	.nav-links {
