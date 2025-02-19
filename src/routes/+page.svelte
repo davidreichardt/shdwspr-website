@@ -91,6 +91,8 @@
 		top: 0;
 		left: 0;
 		width: 100vw;
+		min-width: 100vw;
+		height: 100vh;
 		min-height: 100vh;
 		z-index: -2;
 	}
