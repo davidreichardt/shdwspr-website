@@ -2,8 +2,6 @@
 	<ul class="nav-links">
 		<li><a class="nav-link" href="/">Home</a></li>
 		<li><a class="nav-link" href="/about">About</a></li>
-		<!-- <li><a class="nav-link" href="/members">Members</a></li> -->
-		<!-- <li><a class="nav-link" href="/join">Join</a></li> -->
 	</ul>
 </nav>
 
@@ -49,5 +47,19 @@
 	.nav-link:hover {
 		color: var(--lightblue);
 		text-shadow: 0 0 10px var(--text-glow);
+	}
+
+	@media (max-height: 750px) {
+		nav {
+			height: 30px;
+		}
+
+		.nav-links {
+			margin-top: 10px;
+		}
+
+		.nav-link {
+			font-size: .8rem;
+		}
 	}
 </style>

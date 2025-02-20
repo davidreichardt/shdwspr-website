@@ -104,4 +104,16 @@
 			display: none;
 		}
 	}
+
+	@media (max-height: 750px) {
+		.footer {
+			height: 30px;
+		}
+
+		.copyright,
+		.links {
+			padding-top: 5px;
+			font-size: .5rem;
+		}
+	}
 </style>
