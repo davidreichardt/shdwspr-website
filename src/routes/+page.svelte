@@ -1,9 +1,20 @@
 <script lang="ts">
+	import { onMount } from "svelte";
+
 	let activePopover: string | null = null;
 
 	function togglePopover(branch: string | null) {
 		activePopover = activePopover === branch ? null : branch;
 	}
+
+	onMount(() => {
+		const closeButtons = document.querySelectorAll('.close-popover');
+		closeButtons.forEach((btn) => {
+			btn.addEventListener('click', () => {
+				togglePopover(null);
+			});
+		});
+	});
 </script>
 
 <section class="main">
@@ -50,7 +61,7 @@
 			private military operations. Spear Tactical ensures that contracts are fulfilled with
 			precision and firepower, protecting both members and allies.
 		</p>
-		<button class="close-popover" on:click={() => togglePopover(null)}>Close</button>
+		<button class="close-popover">Close</button>
 	</div>
 	<div class="popover" class:show={activePopover === 'Logistics'}>
 		<h2>Spear Logistics</h2>
@@ -60,7 +71,7 @@
 			supply the Initiative. Spear Logistics ensures that ships stay fueled, weapons stay stocked,
 			and profits keep flowing.
 		</p>
-		<button class="close-popover" on:click={() => togglePopover(null)}>Close</button>
+		<button class="close-popover">Close</button>
 	</div>
 	<div class="popover" class:show={activePopover === 'Recon'}>
 		<h2>Spear Recon</h2>
@@ -70,7 +81,7 @@
 			gathering. Spear Recon discovers strategic locations, hidden routes, and valuable resources to
 			give the Initiative an edge.
 		</p>
-		<button class="close-popover" on:click={() => togglePopover(null)}>Close</button>
+		<button class="close-popover">Close</button>
 	</div>
 	<div class="popover" class:show={activePopover === 'Guardian'}>
 		<h2>Spear Guardian</h2>
@@ -80,7 +91,7 @@
 			to members and allies. Spear Guardian ensures that the Initiative’s ships and crew are kept in
 			top condition, ready for any challenge.
 		</p>
-		<button class="close-popover" on:click={() => togglePopover(null)}>Close</button>
+		<button class="close-popover">Close</button>
 	</div>
 </section>
 
