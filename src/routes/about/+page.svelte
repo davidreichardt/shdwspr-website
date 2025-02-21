@@ -2,7 +2,7 @@
 	<section class="section-header">
 		<h2>History</h2>
 		<p>
-			Shadow Spear Initiative (SHDWSPR) was founded in 2948. Born from a vision of independence and
+			Shadow Spear Initiative (SHDWSPR) was founded in 2954. Born from a vision of independence and
 			adaptability, SHDWSPR operates in the vast expanse of the 'verse, offering its members freedom
 			to pursue their own goals while maintaining the support of a dedicated and skilled
 			organization.
