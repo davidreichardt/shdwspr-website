@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Footer from '../../lib/Footer.svelte';
 	import { DISCORD_LINK, RSI_ORG_LINK } from '../../config.js';
 
 	const links: Record<string, string> = {
@@ -15,7 +16,7 @@
 
 <section class="join-container">
 	<section class="intro-section">
-		<h1>Join <span class="shdwspr-glow-text">Shadow Spear Initiative</span></h1>
+		<h1>Join <span class="shdwspr-glow-text glow-text">Shadow Spear Initiative</span></h1>
 		<p class="intro">
 			Do you have what it takes to carve your name into the stars? Do you thrive in the chaos of
 			battle, the thrill of the hunt, or the rush of striking a lucrative deal? Then Shadow Spear
@@ -64,11 +65,12 @@
 			</li>
 		</ul>
 	</section>
+	<Footer />
 </section>
 
 <style>
 	.join-container {
-		min-height: calc(100vh - 80px);
+		min-height: 100vh;
 		width: 100%;
 		margin: 0 auto;
 		display: flex;
@@ -81,7 +83,8 @@
 		background: var(--darkgray);
 		color: white;
 		box-shadow: inset 0 0 500px var(--neon-glow);
-
+		font-size: clamp(.7rem, .9vw, 1rem);
+		box-sizing: border-box;
 	}
 
 	.intro-section,
@@ -93,11 +96,87 @@
 		padding: 1.5rem;
 	}
 
-	
-	
+	.join-container h1 {
+		font-size: clamp(1.2rem, 5vw, 2rem);
+		margin-top: 90px;
+	}
+
+	.glow-text {
+		color: var(--lightblue);
+		text-shadow: 1px 3px 10px var(--text-glow);
+		font-style: italic;
+	}
+
+	h1 .shdwspr-glow-text {
+		font-size: clamp(1.7rem, 5.2vw, 2.5rem);
+		white-space: normal;
+		color: white;
+	}
+
+	.intro-highlight {
+		font-size: clamp(.8rem, 1vw, 1.05rem);
+		color: var(--lightblue);
+		font-style: italic;
+	}
+
+	.intro-slogan {
+		font-style: italic;
+	}
+
+	.join-btns {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 1rem;
+		max-width: 1100px;
+		width: 100%;
+		margin: 0 auto;
+		box-sizing: border-box;
+		padding: 1.5rem;
+	}
+
 	.benefit-list {
 		list-style: none;
 		margin: 0;
 		padding: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		max-width: 1100px;
+		width: 100%;
+		margin: 0 auto 50px;
+		gap: 1rem;
+	}
+
+	.benefit {
+		border: 2px solid var(--glass-border);
+		border-radius: 15px;
+		padding: 1rem;
+		width: 90%;
+		background: var(--glass-bg);
+		box-shadow: 0 0 10px var(--neon-glow);
+		transition: all .3s ease-in-out;
+	}
+
+	.benefit-title {
+		font-size: clamp(.8rem, 1vw, 1.1rem);
+		color: var(--lightblue);
+		font-weight: 900;
+		text-shadow: 2px 2px 10px var(--text-glow);
+	}
+
+	.benefits-text {
+		font-size: clamp(.6rem, .8vw, .8rem);
+		margin-top: .2rem;
+		font-weight: 600;
+	}
+
+	.benefit:hover {
+		background: var(--lightblue-bg);
+	}
+
+	.benefit:hover .benefit-title {
+		color: var(--darkgray);
+		text-shadow: none;
 	}
 </style>

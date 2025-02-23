@@ -6,14 +6,15 @@
 }
 
 :root {
-    --lightblue: #00CBEF;
-    --darkgray: #36383A;
-    --mediumgray: #606466;
-    --lightgray: #CECED0;
+    --lightblue: rgba(0, 203, 239, 1);
+    --darkgray: rgba(54, 56, 58, 1);
+    --mediumgray: rgba(96, 100, 102, 1);
+    --lightgray: rgba(206, 206, 208, 1);
     --neon-glow: rgba(0, 203, 239, .7);
     --text-glow: rgba(0, 203, 239, .9);
     --glass-bg: rgba(255, 255, 255, .08);
     --glass-border: rgba(0, 203, 239, .3);
+    --lightblue-bg: rgba(0, 203, 239, .5);
     font-family: 'Orbitron', sans-serif;
     font-weight: 400;
     font-size: 16px;
