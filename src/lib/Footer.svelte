@@ -17,9 +17,6 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		position: fixed;
-		bottom: 0;
-		left: 0;
 		background: linear-gradient(
 			to top,
 			rgba(54, 56, 58, 0.9),
@@ -34,7 +31,9 @@
 		font-size: 0.8rem;
 		letter-spacing: 0.1rem;
 		padding: 0;
+		margin: 0;
 		backdrop-filter: blur(8px);
+		overflow-x: hidden;
 	}
 
 	.copyright,
@@ -82,9 +81,7 @@
 			justify-content: flex-end;
 		}
 
-		.links a:last-of-type {
-			padding-right: 15px;
-		}
+		
 	}
 
 	@media (max-width: 570px) {
@@ -95,7 +92,7 @@
 		.copyright {
 			text-align: center;
 			padding-top: 10px;
-			font-size: .6rem;
+			font-size: 0.6rem;
 		}
 
 		.links,
@@ -113,7 +110,7 @@
 		.copyright,
 		.links {
 			padding-top: 5px;
-			font-size: .5rem;
+			font-size: 0.5rem;
 		}
 	}
 </style>

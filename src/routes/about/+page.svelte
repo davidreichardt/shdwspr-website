@@ -118,7 +118,7 @@
 			To this end, Spear Tactical, Spear Logistics, Spear Recon, and Spear Guardian are instituted
 			to uphold our mission and safeguard the future of the Initiative.
 		</p>
-		<p class="glow-text">From the void, we rise.<br /> 2948, Shadow Spear Initiative</p>
+		<p class="glow-text">From the void, we rise.<br /> 2954, Shadow Spear Initiative</p>
 	</section>
 </section>
 

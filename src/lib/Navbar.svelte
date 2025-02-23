@@ -25,6 +25,7 @@
 		);
 		backdrop-filter: blur(8px);
 		letter-spacing: .1rem;
+		overflow-x: hidden;
 	}
 
 	.nav-links {

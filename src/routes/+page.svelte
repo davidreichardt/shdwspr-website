@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { onMount } from "svelte";
+	import { onMount } from 'svelte';
 
 	let activePopover: string | null = null;
 
@@ -22,8 +22,8 @@
 	<h1 class="tagline">Forge Your Own Path</h1>
 	<div class="text-div">
 		<p class="description">
-			Welcome to Shadow Spear Initiative. We are an organization that provides the freedom and
-			support to forge your own path in the 'verse.
+			Welcome to Shadow Spear Initiative. We are a Star Citizen organization that provides the
+			freedom and support to forge your own path in the 'verse.
 		</p>
 		<p class="description call-to-join">Your destiny is yours to shape.</p>
 		<p class="description glow-text">stand with SHDWSPR.</p>
@@ -151,7 +151,6 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		flex-grow: 1;
 		text-align: center;
 		margin-top: 2rem;
 		width: 95%;
@@ -178,7 +177,7 @@
 	}
 
 	.join-div {
-		margin: 1.5rem 0 4.5rem;
+		margin: 1.5rem 0 0;
 		display: flex;
 		justify-content: center;
 		width: 100%;
@@ -209,7 +208,7 @@
 		gap: 1rem;
 		width: 100vw;
 		max-width: 80%;
-		margin-bottom: 150px;
+		margin: 250px;
 	}
 
 	.branch-btn {
@@ -296,6 +295,23 @@
 		.branch-buttons {
 			grid-template-columns: 1fr;
 			margin-bottom: 80px;
+		}
+
+		.popover {
+			padding: 1rem;
+			max-width: 300px;
+		}
+
+		.popover h2 {
+			font-size: 1.1rem;
+		}
+
+		.popover h3 {
+			font-size: 0.9rem;
+		}
+
+		.popover p {
+			font-size: 0.7rem;
 		}
 	}
 </style>
