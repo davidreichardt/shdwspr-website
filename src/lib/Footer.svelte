@@ -173,13 +173,8 @@
 			width: auto;
 		}
 
-		.RSI-logos {
-			flex-direction: column;
-			gap: .5rem;
-		}
-
 		.rsi-logo {
-			height: 70px;
+			height: 80px;
 		}
 	}
 </style>
