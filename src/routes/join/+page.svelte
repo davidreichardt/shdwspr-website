@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Footer from '../../lib/Footer.svelte';
+	import Footer from '$lib/Footer.svelte';
 	import { DISCORD_LINK, RSI_ORG_LINK } from '../../config.js';
 
 	const links: Record<string, string> = {

@@ -42,25 +42,11 @@
 		text-decoration: none;
 		font-size: 1rem;
 		cursor: pointer;
-		transition: color .3s ease-in-out;
+		transition: all .3s ease-in-out;
 	}
 
 	.nav-link:hover {
 		color: var(--lightblue);
 		text-shadow: 0 0 10px var(--text-glow);
-	}
-
-	@media (max-height: 750px) {
-		nav {
-			height: 30px;
-		}
-
-		.nav-links {
-			margin-top: 10px;
-		}
-
-		.nav-link {
-			font-size: .8rem;
-		}
 	}
 </style>

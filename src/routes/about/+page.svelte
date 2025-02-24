@@ -1,3 +1,7 @@
+<script>
+	import Footer from "$lib/Footer.svelte";
+
+</script>
 <section class="about-page-container">
 	<section class="section-header">
 		<h2>History</h2>
@@ -120,6 +124,7 @@
 		</p>
 		<p class="glow-text">From the void, we rise.<br /> 2954, Shadow Spear Initiative</p>
 	</section>
+	<Footer />
 </section>
 
 <style>

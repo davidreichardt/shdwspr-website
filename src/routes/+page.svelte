@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
+	import Footer from '$lib/Footer.svelte';
+import { onMount } from 'svelte';
 
 	let activePopover: string | null = null;
 
@@ -93,6 +94,7 @@
 		</p>
 		<button class="close-popover">Close</button>
 	</div>
+	<Footer />
 </section>
 
 <style>
