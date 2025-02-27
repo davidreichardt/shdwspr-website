@@ -25,10 +25,10 @@
 
 <div class="mobile-menu {menuOpen ? 'open' : ''}">
 	{#each navLinks as { name, href }, i}
-		<a class="mobile-nav-link" href={href}>{name}</a>
+		<a class="mobile-nav-link" href={href} on:click={() => (menuOpen = false)}>{name}</a>
 	{/each}
 	{#if menuOpen}
-		<a class="mobile-nav-link" href="/login">Login</a>
+		<a class="mobile-nav-link" href="/login" on:click={() => (menuOpen = false)}>Login</a>
 	{/if}
 </div>
 
@@ -148,7 +148,6 @@
 		background: var(--glass-bg);
 		backdrop-filter: blur(10px);
 		border-right: 2px solid var(--glass-border);
-		box-shadow: 5px 0 15px var(--neon-glow);
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
