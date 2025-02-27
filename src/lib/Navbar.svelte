@@ -3,16 +3,15 @@
 	const navLinks = [
 		{ name: 'Home', href: '/' },
 		{ name: 'About', href: '/about' },
-		{ name: 'Join', href: '/join' },
-		{ name: 'Login', href: '/login' }
+		{ name: 'Join', href: '/join' }
 	];
 </script>
 
 <nav>
-	<div class="logo">SHDWSPR</div>
+	<h1 class="logo">Shadow Spear Initiative</h1>
 	<div class="nav-links">
 		{#each navLinks as { name, href }}
-			<a class="nav-link" href={href}>{name}</a>
+			<a class="nav-link" {href}>{name}</a>
 		{/each}
 	</div>
 	<div class="login">Login</div>
@@ -39,11 +38,21 @@
 		margin: 0;
 		font-size: clamp(0.7rem, 1vw, 1rem);
 		color: var(--lightgray);
-		letter-spacing: .1rem;
-		transition: transform .3s ease-in-out;
+		letter-spacing: 0.1rem;
+		transition: transform 0.3s ease-in-out;
+	}
+
+	.logo {
+		font-size: clamp(1rem, 1.5vw, 1.3rem);
+		color: white;
+		text-shadow: 0 0 15px var(--text-glow);
+		font-style: italic;
 	}
 
 	.nav-links {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
 		display: flex;
 		gap: 2rem;
 	}

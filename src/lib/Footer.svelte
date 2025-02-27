@@ -1,13 +1,19 @@
 <script>
-	import { RSI_ORG_LINK, DISCORD_LINK } from '../config.js';
+	import { RSI_ORG_LINK, DISCORD_LINK, YOUTUBE_LINK } from '../config.js';
+	const links = [
+		{ name: 'RSI Org Page', href: RSI_ORG_LINK },
+		{ name: 'Discord', href: DISCORD_LINK },
+		{ name: 'Youtube', href: YOUTUBE_LINK }
+	];
 </script>
 
 <section class="footer">
-		<div class="org-links">
-			<a class="link" href={RSI_ORG_LINK} rel="noopener noreferrer" target="_blank">RSI Org Page</a>
-			<a class="link" href={DISCORD_LINK} rel="noopener noreferrer" target="_blank">Discord</a>
-		</div>
-		<div class="divider-line"></div>
+	<div class="org-links">
+		{#each links as { name, href }}
+			<a class="link" {href} rel="noopener noreferrer" target="_blank">{name}</a>
+		{/each}
+	</div>
+	<div class="divider-line"></div>
 	<div class="RSI-disclaimer">
 		<div class="RSI-logos">
 			<a href="https://robertsspaceindustries.com/" rel="noopener noreferrer" target="_blank"
@@ -110,17 +116,23 @@
 		height: 120px;
 		width: auto;
 		max-width: 100%;
+		opacity: 0.9;
+	}
+
+	.rsi-logo:hover {
+		opacity: 1;
 	}
 
 	.disclaimer {
 		margin: 2rem 0 0;
 		max-width: 100%;
+		font-size: clamp(0.5rem, 0.8vw, 0.8rem);
 	}
 
 	.copyright {
 		grid-column: span 3;
 		text-align: center;
-		font-size: clamp(.5rem, .8vw, .8rem);
+		font-size: clamp(0.5rem, 0.8vw, 0.8rem);
 		margin: 1rem auto;
 		max-width: 100%;
 	}
@@ -165,7 +177,7 @@
 
 	@media (max-width: 450px) {
 		.footer {
-			padding: 1rem .5rem;
+			padding: 1rem 0.5rem;
 			gap: 1rem;
 		}
 
