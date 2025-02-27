@@ -24,7 +24,7 @@
 </nav>
 
 <div class="mobile-menu {menuOpen ? 'open' : ''}">
-	{#each navLinks as { name, href }, i}
+	{#each navLinks as { name, href }}
 		<a class="mobile-nav-link" href={href} on:click={() => (menuOpen = false)}>{name}</a>
 	{/each}
 	{#if menuOpen}
@@ -147,7 +147,6 @@
 		height: 100vh;
 		background: var(--glass-bg);
 		backdrop-filter: blur(10px);
-		border-right: 2px solid var(--glass-border);
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
