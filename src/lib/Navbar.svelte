@@ -1,52 +1,61 @@
+<script>
+	let menuOpen = false;
+	const navLinks = [
+		{ name: 'Home', href: '/' },
+		{ name: 'About', href: '/about' },
+		{ name: 'Join', href: '/join' },
+		{ name: 'Login', href: '/login' }
+	];
+</script>
+
 <nav>
-	<ul class="nav-links">
-		<li><a class="nav-link" href="/">Home</a></li>
-		<li><a class="nav-link" href="/about">About</a></li>
-	</ul>
+	<div class="logo">SHDWSPR</div>
+	<div class="nav-links">
+		{#each navLinks as { name, href }}
+			<a class="nav-link" href={href}>{name}</a>
+		{/each}
+	</div>
+	<div class="login">Login</div>
 </nav>
 
 <style>
 	nav {
-		display: flex;
-		justify-content: center;
-		align-items: center;
 		position: fixed;
 		top: 0;
-		left: 0;
 		width: 100%;
-		height: 80px;
+		max-width: 100vw;
+		min-height: 40px;
+		max-height: 80px;
+		box-sizing: border-box;
+		background: var(--glass-bg);
+		backdrop-filter: blur(10px);
+		border-bottom: 2px solid var(--glass-border);
+		box-shadow: 0 5px 10px var(--neon-glow);
 		z-index: 1000;
-		background: linear-gradient(
-			to bottom,
-			rgba(54, 56, 58, .9),
-			rgba(54, 56, 58, 0.6) 75%,
-			rgba(54, 56, 58, 0.2) 85%,
-			transparent 100%
-		);
-		backdrop-filter: blur(8px);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 2rem;
+		margin: 0;
+		font-size: clamp(0.7rem, 1vw, 1rem);
+		color: var(--lightgray);
 		letter-spacing: .1rem;
-		overflow-x: hidden;
+		transition: transform .3s ease-in-out;
 	}
 
 	.nav-links {
 		display: flex;
-		gap: 4rem;
-		margin: 0;
-		padding: 0;
-		padding-bottom: 20px;
-		list-style: none;
+		gap: 2rem;
 	}
 
 	.nav-link {
 		color: var(--lightgray);
 		text-decoration: none;
-		font-size: 1rem;
-		cursor: pointer;
-		transition: all .3s ease-in-out;
+		transition: all 0.3s ease-in-out;
 	}
 
 	.nav-link:hover {
 		color: var(--lightblue);
-		text-shadow: 0 0 10px var(--text-glow);
+		text-shadow: 0 0 5px var(--text-glow);
 	}
 </style>
