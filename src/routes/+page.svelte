@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Footer from '$lib/Footer.svelte';
-import { onMount } from 'svelte';
+	import { onMount } from 'svelte';
 
 	let activePopover: string | null = null;
 
@@ -51,7 +51,13 @@ import { onMount } from 'svelte';
 
 	<!-- div that dims and blurs the background when a popover is active -->
 	{#if activePopover}
-		<div class="dimmed-bg" on:click={() => togglePopover(null)}></div>
+		<div
+			class="dimmed-bg"
+			tabindex="0"
+			role="button"
+			on:click={() => togglePopover(null)}
+			on:keydown={(e) => (e.key === 'Enter' || e.key === 'Escape') && togglePopover(null)}
+		></div>
 	{/if}
 
 	<div class="popover" class:show={activePopover === 'Tactical'}>

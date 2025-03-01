@@ -16,7 +16,7 @@
 	</div>
 	<div class="login">Login</div>
 
-	<div class="menu-btn {menuOpen ? 'open' : ''}" on:click={() => (menuOpen = !menuOpen)}>
+	<div class="menu-btn {menuOpen ? 'open' : ''}" tabindex="0" role="button" on:keydown={(e) => e.key === "Enter" &&  (menuOpen = !menuOpen)} on:click={() => (menuOpen = !menuOpen)}>
 		<span></span>
 		<span></span>
 		<span></span>
@@ -212,7 +212,7 @@
 			display: none;
 		}
 
-		.nav {
+		nav {
 			max-height: 50px;
 		}
 
