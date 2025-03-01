@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Footer from '$lib/Footer.svelte';
+	import Navbar from '$lib/Navbar.svelte';
 	import { DISCORD_LINK, RSI_ORG_LINK } from '../../config.js';
 
 	const links: Record<string, string> = {
@@ -15,6 +16,7 @@
 </script>
 
 <section class="join-container">
+	<Navbar />
 	<section class="intro-section">
 		<h1>Join <span class="shdwspr-glow-text glow-text">Shadow Spear Initiative</span></h1>
 		<p class="intro">
@@ -178,5 +180,23 @@
 	.benefit:hover .benefit-title {
 		color: var(--darkgray);
 		text-shadow: none;
+	}
+
+	@media (max-width: 1500px) {
+		.join-container {
+			box-shadow: inset 0 0 100px var(--neon-glow);
+		}
+	}
+
+	@media (max-width: 890px) {
+		.join-container h1 {
+			margin-top: 0;
+		}
+	}
+
+	@media (max-width: 1300px) {
+		.join-container {
+			box-shadow: inset 0 0 20px var(--neon-glow);
+		}
 	}
 </style>

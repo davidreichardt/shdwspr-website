@@ -2,8 +2,7 @@
 	import { RSI_ORG_LINK, DISCORD_LINK, YOUTUBE_LINK } from '../config.js';
 	const links = [
 		{ name: 'RSI Org Page', href: RSI_ORG_LINK },
-		{ name: 'Discord', href: DISCORD_LINK },
-		{ name: 'Youtube', href: YOUTUBE_LINK }
+		{ name: 'Discord', href: DISCORD_LINK }
 	];
 </script>
 
@@ -66,6 +65,7 @@
 		align-items: center;
 		gap: 1rem;
 		max-width: 100%;
+		box-sizing: border-box;
 	}
 
 	.link {
@@ -101,6 +101,7 @@
 		text-align: center;
 		max-width: 100%;
 		margin: 0 auto;
+		box-sizing: border-box;
 	}
 
 	.RSI-logos {
@@ -110,6 +111,7 @@
 		gap: 2rem;
 		max-width: 100%;
 		flex-wrap: wrap;
+		box-sizing: border-box;
 	}
 
 	.rsi-logo {

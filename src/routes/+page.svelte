@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Footer from '$lib/Footer.svelte';
+	import Navbar from '$lib/Navbar.svelte';
 	import { onMount } from 'svelte';
 
 	let activePopover: string | null = null;
@@ -19,6 +20,7 @@
 </script>
 
 <section class="main">
+	<Navbar />
 	<div class="background-img"></div>
 	<h1 class="tagline">Forge Your Own Path</h1>
 	<div class="text-div">
@@ -105,7 +107,7 @@
 
 <style>
 	.background-img {
-		background: url('/images/hero-polaris.jpeg') center/cover no-repeat;
+		background: url('/images/polaris-quantum.jpg') center/cover no-repeat;
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -124,7 +126,7 @@
 		left: 0;
 		width: 100vw;
 		height: 100vh;
-		background: rgba(0, 0, 0, 0.3);
+		background: rgba(0, 0, 0, 0.4);
 		z-index: -1;
 	}
 
@@ -296,6 +298,12 @@
 	@media (max-width: 1080px) {
 		.branch-buttons {
 			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	@media (max-width: 890px) {
+		.tagline {
+			margin-top: 0px;
 		}
 	}
 

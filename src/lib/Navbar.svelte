@@ -27,9 +27,7 @@
 	{#each navLinks as { name, href }}
 		<a class="mobile-nav-link" href={href} on:click={() => (menuOpen = false)}>{name}</a>
 	{/each}
-	{#if menuOpen}
-		<a class="mobile-nav-link" href="/login" on:click={() => (menuOpen = false)}>Login</a>
-	{/if}
+	<a class="mobile-nav-link" href="/login" on:click={() => (menuOpen = false)}>Login</a>
 </div>
 
 <style>
@@ -141,7 +139,7 @@
 
 	.mobile-menu {
 		position: fixed;
-		top: 45px;
+		top: 80px;
 		left: -100%;
 		width: 100vw;
 		height: 100vh;
@@ -154,6 +152,7 @@
 		gap: 2rem;
 		transition: left 0.4s ease-in-out;
 		z-index: 1001;
+		border-top: 2px solid var(--glass-border);
 	}
 
 	.mobile-menu.open {
@@ -166,38 +165,30 @@
 		font-size: 1.5rem;
 		text-transform: uppercase;
 		opacity: 0;
-		transform: translateY(-50px);
+		transform: translateX(-100vw);
+		transition: transform 0.5s ease-out, opacity 0.4s ease-out;
 		z-index: 1002;
 	}
 
 	.mobile-menu.open .mobile-nav-link {
-		animation: slam-down .5s ease-out forwards;
-	}
-
-	@keyframes slam-down {
-		from {
-			transform: translateY(-50px);
-			opacity: 0;
-		}
-		80% {
-			transform: translateY(10px);
-		}
-		100% {
-			transform: translateY(0);
-			opacity: 1;
-		}
+		opacity: 1;
+		transform: translateX(0);
 	}
 
 	.mobile-menu.open .mobile-nav-link:nth-child(1) {
-		animation-delay: 100ms;
+		transition-delay: .2s;
 	}
 
 	.mobile-menu.open .mobile-nav-link:nth-child(2) {
-		animation-delay: 200ms;
+		transition-delay: .3s;
 	}
 
 	.mobile-menu.open .mobile-nav-link:nth-child(3) {
-		animation-delay: 300ms;
+		transition-delay: .4s;
+	}
+
+	.mobile-menu.open .mobile-nav-link:nth-child(4) {
+		transition-delay: .5s;
 	}
 
 	.mobile-menu.open .mobile-nav-link:hover {
@@ -213,11 +204,18 @@
 		}
 
 		nav {
-			max-height: 50px;
+			backdrop-filter: none;
+			background: none;
+			box-shadow: none;
+			padding: 0;
+			border: none;
+			height: 70px;
+			position: static;
 		}
 
 		.menu-btn {
 			display: block;
+			margin: 0 0 0 15px;
 		}
 	}
 </style>
