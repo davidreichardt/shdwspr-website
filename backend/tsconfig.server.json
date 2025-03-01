@@ -1,0 +1,14 @@
+{
+    "extends": "../tsconfig.json",
+    "compilerOptions": {
+      "outDir": "../dist",
+      "rootDir": ".",
+      "module": "NodeNext",
+      "moduleResolution": "NodeNext",
+      "target": "ESNext",
+      "resolvePackageJsonExports": true,
+      "resolvePackageJsonImports": true,
+      "noEmit": false
+    },
+    "include": ["."]
+  }

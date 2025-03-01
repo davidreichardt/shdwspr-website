@@ -34,7 +34,7 @@
 	"include": [
     	"src",
 		"backend",
-    	"src/backend/index.tsx.ts"
+    	"backend/index.tsx.ts"
   	],
   	"exclude": [
     	"node_modules",
