@@ -87,8 +87,3 @@ app.get("/auth/user", (req: Request, res: Response) => {
 //start server
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-
-console.log("Discord Client ID:", process.env.DISCORD_CLIENT_ID);
-console.log("Discord Client Secret:", process.env.DISCORD_CLIENT_SECRET);
-console.log("Discord Redirect URI:", process.env.DISCORD_REDIRECT_URI);
-console.log("Session Secret:", process.env.SESSION_SECRET);
