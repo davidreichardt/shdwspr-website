@@ -10,5 +10,5 @@
       "resolvePackageJsonImports": true,
       "noEmit": false
     },
-    "include": ["."]
+    "include": ["index.ts"]
   }
