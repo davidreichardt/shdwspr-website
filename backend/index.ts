@@ -6,7 +6,7 @@ import { Strategy as DiscordStrategy } from 'passport-discord';
 import type { Profile } from 'passport-discord';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import { handler } from '../build/handler.js';
+import { handler } from '../.svelte-kit/output/server/index.js';
 
 dotenv.config();
 
