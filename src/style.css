@@ -1,3 +1,52 @@
+/* Reset some default browser styles */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set a consistent font-family */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Remove text decorations from links */
+a {
+    text-decoration: none;
+}
+
+/* Normalize button styles */
+button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* Remove list styles */
+ul,
+ol {
+    list-style: none;
+}
+
+/* Normalize form controls */
+input,
+select,
+textarea,
+button {
+    font: inherit;
+    color: inherit;
+    border: none;
+    outline: none;
+}
+
+/* Other common resets */
+html,
+body {
+    height: 100%;
+}
+
 @font-face {
     font-family: 'Orbitron';
     src: url(/fonts/Orbitron-VariableFont_wght.ttf) format('truetype');
