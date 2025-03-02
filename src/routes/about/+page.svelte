@@ -9,19 +9,13 @@
 		<h2 class="section-title">History</h2>
 		<div class="separator"></div>
 		<p class="section-text">
-			Shadow Spear Initiative (SHDWSPR) was founded in 2954. Born from a vision of independence and
-			adaptability, SHDWSPR operates in the vast expanse of the 'verse, offering its members freedom
-			to pursue their own goals while maintaining the support of a dedicated and skilled
-			organization.
+			Founded in 2954 by two friends who had roots in hauling and logistical work, Shadow Spear Initiative began with a simple, pragmatic goal: to earn enough UEC to invest in better ships. In those early days, every mission they undertook was a step toward greater independence with each credit earned building the foundation for a future beyond conventional work.
 		</p>
 		<p class="section-text">
-			SHDWSPR engages in a range of activities, including (but not limited to) freelance contracts,
-			mercenary work, bounty hunting, trading, resource gathering, and hauling.
+			As SHDWSPR’s fleet grew, so did their ambitions. The turning point came when the notorious Nine Tails seized control of scattered bunkers, posing a threat to critical infrastructure. Seizing the opportunity, the fledgling organization decided to try their hand at combat and orchestrated a daring counterstrike, successfully reclaiming these bunkers. The victory not only solidified their reputation but also signaled that SHDWSPR was more than just a logistical outfit... it was a force capable of decisive combat.
 		</p>
 		<p class="section-text">
-			Despite its mercenary roots, SHDWSPR is not bound by a strict military hierarchy. Instead, it
-			thrives on a brotherhood of capable pilots, soldiers, and industrialists who work together for
-			mutual success.
+			Buoyed by their early successes, the founders redefined the organization’s mission. They decided to pivot toward becoming a security-for-hire outfit, offering their combat prowess to those in need of protection, while still maintaining their roots in logistical work. This dual focus allowed SHDWSPR to diversify its income streams: high-risk, high-reward contracts in the field, paired with steady earnings from logistic operations. This strategic balance enabled them to remain agile and self-sustaining in the 'verse.
 		</p>
 	</section>
 
@@ -29,15 +23,10 @@
 		<h2 class="section-title">Manifesto</h2>
 		<div class="separator"></div>
 		<p class="section-text">
-			In the vast and chaotic expanse of the 'verse, where empires rise and fall, where corporations
-			exploit and syndicates manipulate, we stand apart. Shadow Spear Initiative is not bound by
-			bureaucracy, not shackled by politics, and not driven by blind allegiance. We are freelancers,
-			warriors, and survivors; a force navigating the stars on our own terms.
+			In the chaotic expanse of the ’verse, where the UEE wields power and corporations exploit the weak, we stand apart. The Shadow Spear Initiative bows to no government, corporation, or petty tyrant. We answer only to our own code and the call of a worthy contract. SHDWSPR is a collective of mercenaries logistical experts, survivors forged by brotherhood and bound by a shared purpose. We chart our own course among the stars, guided by profit and principle rather than the whims of any empire.
 		</p>
 		<p class="section-text">
-			We do not seek conquest, nor do we kneel to those who claim dominion over the void. Instead,
-			we forge our own path, taking contracts that suit our interests, forging alliances where they
-			benefit us, and protecting what is ours with unwavering resolve.
+			We do not seek to conquer, nor will we kneel to those who claim dominion over the void. Instead, we carve our own path with strategic precision and mercenary professionalism. We take on contracts that challenge us and reward us, forging alliances only when they serve our interests. We protect what is ours with unwavering resolve: our crew, our clients, and our hard-won assets. In all things, we operate with honor and calculated force, letting our victories speak for themselves.
 		</p>
 	</section>
 
@@ -48,25 +37,13 @@
 			<div class="section-list-item principle">
 				<h3 class="section-list-item-title principle-title">Freedom Above All</h3>
 				<p class="section-text principle-text">
-					We answer to no king, no empire, no corporation. We operate where we will, take the jobs
-					we choose, and determine our own destiny. Our members have autonomy in how they operate,
-					but they are expected to uphold the Initiative's honor and interests.
-				</p>
-			</div>
-			<div class="section-list-item principle">
-				<h3 class="section-list-item-title principle-title">Freedom Above All</h3>
-				<p class="section-text principle-text">
-					We answer to no king, no empire, no corporation. We operate where we will, take the jobs
-					we choose, and determine our own destiny. Our members have autonomy in how they operate,
-					but they are expected to uphold the Initiative's honor and interests.
+					No ruler or regime dictates our fate. We choose our battles, our contracts, and our destiny in the ’verse. Every member of SHDWSPR has the autonomy to pursue their own opportunities, so long as they uphold the Initiative’s code. This freedom is our greatest treasure, earned by each of us and defended fiercely against anyone who would take it away.
 				</p>
 			</div>
 			<div class="section-list-item principle">
 				<h3 class="section-list-item-title principle-title">Honor in Action</h3>
 				<p class="section-text principle-text">
-					We are not pirates. We are not griefers. Our actions define us, and we conduct our
-					business with integrity. Betrayal, senseless destruction, and chaos have no place among
-					us. We fight, we protect, we profit—but we do not dishonor our name.
+					We may fight for pay, but we will not sacrifice our honor. The Shadow Spear Initiative holds itself to a higher standard than common pirates or petty criminals. We honor our deals and show respect to those who treat us fairly. We fight, we protect, and we profit, but never at the cost of our integrity or reputation.
 				</p>
 			</div>
 			<div class="section-list-item principle">
@@ -80,9 +57,7 @@
 			<div class="section-list-item principle">
 				<h3 class="section-list-item-title principle-title">Adapt and Overcome</h3>
 				<p class="section-text principle-text">
-					The 'verse is unpredictable, and survival belongs to those who can adapt. Whether in
-					battle or business, we are always ready to pivot, seize opportunities, and overcome
-					challenges. Strategy, cunning, and resilience are our weapons as much as our firearms.
+					The ’verse is ever-changing, and only those who adapt will survive. SHDWSPR meets uncertainty with flexibility and cunning. When plans go awry or new threats emerge, we adjust tactics on the fly and turn setbacks into opportunities. We wield strategy and ingenuity as deftly as we do any weapon. No matter what challenges arise, we improvise, overcome, and emerge victorious.
 				</p>
 			</div>
 		</section>
@@ -93,23 +68,27 @@
 		<div class="separator"></div>
 		<section class="section-list operations-list">
 			<div class="section-list-item operation">
-				<h3 class="section-list-item-title operation-title">Freelance Contracting:</h3>
+				<h3 class="section-list-item-title operation-title">Mercenary Contracts</h3>
 				<p class="section-text operation-text">
-					We take on contracts that align with our interests, whether they be combat missions,
-					security details, or resource gathering.
+					Combat and security operations are our specialty. From bounty hunts and armed escorts to full-scale strike missions, we take on high-risk jobs that demand skill and courage. Every contract is chosen carefully to align with our code: we fight on our terms and always for a worthy payout.
 				</p>
 			</div>
 			<div class="section-list-item operation">
-				<h3 class="section-list-item-title operation-title">Neutral Yet Unyielding:</h3>
+				<h3 class="section-list-item-title operation-title">Logistics</h3>
 				<p class="section-text operation-text">
-					We are not here to make enemies, but we will not hesitate to eliminate threats to our own.
+					While battle is our forte, logistics is our lifeline and origin. Mining, salvaging, hauling, and trade are carried out as needed to build our bases, fund our fleet, and keep the credits flowing. These support operations ensure that SHDWSPR has the resources and infrastructure to sustain its mercenary campaign.
 				</p>
 			</div>
 			<div class="section-list-item operation">
-				<h3 class="section-list-item-title operation-title">Survival and Prosperity:</h3>
+				<h3 class="section-list-item-title operation-title">Neutral, Not Passive</h3>
 				<p class="section-text operation-text">
-					We seek to ensure that every member has the means to thrive, be it through fair pay, trade
-					opportunities, or protection in dangerous territories.
+					We don’t go looking for needless enemies, preferring to stay neutral in the wider conflicts of the ’verse. However, make no mistake... we are never passive. If anyone threatens our crew, our clients, or our interests, we respond with decisive force. Those who cross SHDWSPR quickly learn that we do not back down.
+				</p>
+			</div>
+			<div class="section-list-item operation">
+				<h3 class="section-list-item-title operation-title">Survival and Prosperity</h3>
+				<p class="section-text operation-text">
+					Above all, SHDWSPR looks after its own. Every mission is planned with both success and survival in mind. Profits are shared fairly among those who earn them, and spoils are reinvested to improve our ships, weapons, and outposts. By ensuring each member has the means to thrive, the entire Initiative grows stronger and richer together.
 				</p>
 			</div>
 		</section>
@@ -119,12 +98,10 @@
 		<h2 class="section-title">The Shadow Spear Ethos</h2>
 		<div class="separator"></div>
 		<p class="section-text">
-			We are shadows in the dark, spears in the hands of those who dare to fight. We operate in the
-			liminal space between law and lawlessness, taking what we need, defending what is ours, and
-			ensuring that those who stand against us regret the day they did.
+			We are the shadows in the dark, the razor-sharp spear tip that strikes for those who earn our allegiance. As a disciplined, elite force for hire, we move with purpose in the gray space between law and chaos. We strike with precision, taking what we need and protecting what is ours. Any who dare stand against us will rue the day... if they live to see another.
 		</p>
 		<p class="section-text">
-			Those who stand with us will find opportunity. Those who betray us will find only regret.
+			For those who stand with us, whether as allies or clients, we offer loyalty and formidable skill. Those who betray us or hinder our path find nothing but regret.
 		</p>
 		<p class="glow-text">We are Shadow Spear Initiative. The 'verse will remember our name.</p>
 	</section>
@@ -133,24 +110,13 @@
 		<h2 class="section-title">Charter</h2>
 		<div class="separator"></div>
 		<p class="section-text">
-			By the Will of those who stand in the shadows and strike with precision, the Shadow Spear
-			Initiative is established as an independent and self-sustaining force, bound by profit,
-			survival, and tactical superiority.
+			By the will of those who stand in shadows and strike with precision, the Shadow Spear Initiative is established as an independent, self-sustaining private military company. We are bound not by borders or governments, but by our own code, by profit, and by survival. SHDWSPR operates beyond the reach of any empire’s control and owes allegiance solely to its brotherhood of mercenaries. We may honor the laws of the UEE when it suits us, but we bow to no authority that would limit our freedom or ambition.
 		</p>
 		<p class="section-text">
-			SHDWSPR operates beyond borders, beyond politics, and owes allegiance only to its own code.
-			While we respect the laws of the UEE where beneficial, we do not bow to any empire, faction,
-			or authority that would seek to limit our freedom or potential.
+			It is hereby decreed that SHDWSPR shall remain neutral whenever possible, but never passive. We will engage in battle, trade, or diplomacy as needed to secure our interests and fulfill our contracts. Our path is not one of wanton conquest, but of calculated strength. We choose our fights wisely and execute each mission with precision, ensuring our members thrive in the void and adapt to every challenge.
 		</p>
 		<p class="section-text">
-			It is decreed that SHDWSPR shall remain neutral, but never passive and shall engage in battle,
-			trade, or diplomacy as needed to secure its interests. Our path is not one of conquest, but of
-			calculated force, ensuring that our members thrive in the void, adapt to any challenge, and
-			execute with precision.
-		</p>
-		<p class="section-text">
-			To this end, Spear Tactical, Spear Logistics, Spear Recon, and Spear Guardian are instituted
-			to uphold our mission and safeguard the future of the Initiative.
+			To this end, SHDWSPR is organized into four branches, each addressing a crucial aspect of our operations. Spear Tactical leads our forces in combat, while Spear Logistics fuels and funds our efforts to keep the fleet armed and the coffers filled. Spear Recon scouts the unknown for intelligence and opportunity, while Spear Guardian provides medical and technical support to keep our warriors in fighting shape. Together, these branches uphold the mission and safeguard the future of the Initiative.
 		</p>
 		<p class="glow-text">From the void, we rise.<br /> 2954, Shadow Spear Initiative</p>
 	</section>
